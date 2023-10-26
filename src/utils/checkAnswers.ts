@@ -1,16 +1,11 @@
 import { answers } from "../answers";
 import { playersData } from "../playersData";
+import { saveResult } from "./saveResult";
 
 export const checkAnswers = () => {
   const gamesAmount:number[] = Array.from(playersData.keys());
-  let currentGameNumber = 1;
   let count = 0;
   const wrongAnswers:string[] = [];
-
-  if(gamesAmount.length > 0){
-    let lastGameNumber:number = gamesAmount.sort((a,b) => b-a)[0];
-    currentGameNumber = ++lastGameNumber;
-  };
 
   for(let key in answers){
     const className = key.replace(/\s/g, '');
@@ -25,6 +20,5 @@ export const checkAnswers = () => {
       wrongAnswers.push(answers[key as keyof typeof answers]);
     }
   };
-
-  playersData.set(currentGameNumber, {count, wrongAnswers});
+  saveResult(count, wrongAnswers);
 }

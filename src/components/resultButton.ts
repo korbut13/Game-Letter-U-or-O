@@ -15,22 +15,30 @@ export const ResultButton = () => {
     checkResults!.classList.toggle('none');
 
     resultsData!.innerHTML = "";
+    const results = localStorage.getItem('results');
+    if(results){
+      const sortedResults = JSON.parse(results).sort((a:{count:number},b:{count:number}) => b.count - a.count);
 
-    for(const dataGame of playersData.entries()){
-      const resultContainer = document.createElement('div');
-      resultContainer.className = 'container-result';
-      const numberGame = document.createElement('div');
-      numberGame.innerText = `${dataGame[0]}`;
+      for(let i=0; i < sortedResults.length; i++){
 
-      const count = document.createElement('div');
-      count.innerText = `${dataGame[1].count}`;
+        const resultContainer = document.createElement('div');
+        resultContainer.className = 'container-result';
 
-      const wrongAnswers = document.createElement('div');
-      wrongAnswers.innerText = `${dataGame[1].wrongAnswers}`;
+        const numberGame = document.createElement('div');
+        const numberOfGame = i + 1;
+        numberGame.innerText = `${numberOfGame}`;
 
-      resultContainer.append(numberGame,count,wrongAnswers);
-      resultsData!.append(resultContainer);
-    };
+        const count = document.createElement('div');
+        count.innerText = `${sortedResults[i].count}`;
+
+        const wrongAnswers = document.createElement('div');
+        wrongAnswers.innerText = `${sortedResults[i].wrongAnswers}`;
+
+        resultContainer.append(numberGame,count,wrongAnswers);
+        resultsData!.append(resultContainer);
+      };
+    }
+
   });
   return resultsButton;
 }

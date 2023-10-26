@@ -1,1 +1,6 @@
-export const playersData = new Map<number,{count:number,  wrongAnswers:string[]}>();
+export type GameData = {
+  count:number,
+  wrongAnswers:string[]
+};
+
+export const playersData:GameData[] = [];
