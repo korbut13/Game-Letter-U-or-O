@@ -1,7 +1,15 @@
+@font-face {
+  font-family: 'Playpen Sans';
+  src: url('./accets/PlaypenSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
 body{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Playpen Sans';
 }
 .container-image{
   background-image: url('./accets/Прогулка\ 24.10.23-1.jpg');
@@ -14,6 +22,7 @@ body{
 .wrapper{
   width: 70%;
   margin: 0 auto;
+  padding: 20px;
   background-color: #d6c80a5f;
   border: none;
   border-radius: 5px;
@@ -22,25 +31,29 @@ body{
 .menu{
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 80px;
 }
 
 .container-letter{
   display: inline;
   padding: 5px;
-  font-size: 20px;
+  font-size: 30px;
+  font-family: 'Playpen Sans';
 }
 .container-missing-letter{
   border:  1px solid orange;
   height: 34px;
   padding: 2px 2px;
-  font-size: 20px;
+  font-size: 30px;
   width: 20px;
-  padding-left: 10px;
+  padding-left: 5px;
+  font-family: 'Playpen Sans';
 }
 .container-word{
-  margin: 20px;
+  width: 300px;
+  margin: 20px auto;
   text-align: left;
+
 }
 
 .button-check,

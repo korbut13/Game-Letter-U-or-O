@@ -1,12 +1,14 @@
 import { words } from "../words";
 import { CreateWord } from "./word";
-import { playersData } from "../playersData";
+import startSound from '../accets/gameStart.mp3';
 
 export const StartGameButton = () => {
   const startButton = document.createElement('button');
   startButton.innerText = 'Старт';
   startButton.className = 'start-button';
   startButton.addEventListener('click', ()=>{
+    const startAudio = new Audio(startSound);
+    startAudio.play()
     const wordsWrapper = document.querySelector('.word-wrapper');
     wordsWrapper!.innerHTML = "";
     words.sort(() => Math.random() - 0.5);
