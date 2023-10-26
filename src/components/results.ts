@@ -4,21 +4,25 @@ export const Results = () => {
   const wrapper = document.createElement('div');
   wrapper.className = 'results-wrapper none';
 
-  for(let key in playersData){
+  const headerOfResults = document.createElement('div');
+  headerOfResults.className = 'results__header';
 
-    const resultContainer = document.createElement('div');
-    resultContainer.className = 'container-result';
-    const number = document.createElement('div');
-    number.innerText = key;
+  const gameNumber = document.createElement('div');
+  gameNumber.className = 'results__headers_number';
+  gameNumber.innerText = 'Game';
 
-    const count = document.createElement('div');
-    count.innerText = `${playersData[key].count}`;
+  const gameCount = document.createElement('div');
+  gameCount.className = 'results__headers_count';
+  gameCount.innerText = 'Count';
 
-    const wrongAnswers = document.createElement('div');
-    wrongAnswers.innerText = `${playersData[key].wrongAnswers}`;
+  const gameWrongAnswers = document.createElement('div');
+  gameWrongAnswers.className = 'results__headers_wrong-answers';
+  gameWrongAnswers.innerText = 'Wrong Answers';
 
-    resultContainer.append(number,count,wrongAnswers);
-    wrapper.append(resultContainer);
-  };
+  const resultsData = document.createElement('div');
+  resultsData.className = 'results__results-data';
+
+  headerOfResults.append(gameNumber, gameCount, gameWrongAnswers);
+  wrapper.append(headerOfResults,resultsData);
   return wrapper;
 }

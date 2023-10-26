@@ -1,7 +1,1 @@
-type PlayersData = {
-  [key:string]:{
-    count:number,
-    wrongAnswers:string[]
-  }
-}
-export const playersData:PlayersData = {};
+export const playersData = new Map<number,{count:number,  wrongAnswers:string[]}>();

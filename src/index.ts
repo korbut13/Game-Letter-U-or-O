@@ -13,6 +13,6 @@ import { MainImage } from './components/main-image';
 const wrapper = document.createElement('div');
 wrapper.className = 'wrapper';
 
-wrapper.append(Menu(), MainImage(), WordsWrapper(), Results());
+wrapper.append(Menu(), MainImage(), WordsWrapper(), Results(), CheckButton());
 
 document.body.append(wrapper)
