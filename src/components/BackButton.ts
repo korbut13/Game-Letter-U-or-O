@@ -3,7 +3,7 @@ export const BackButton = () => {
   backButton.innerText = 'Назад';
   backButton.className = 'button-back none';
   backButton.addEventListener('click', ()=>{
-    const wordsWrapper = document.querySelector('.word-wrapper');
+    const wordsWrapper = document.querySelector('.words-wrapper');
     const resultsWrapper = document.querySelector('.results-wrapper');
     const checkResults = document.querySelector('.button-check');
 

@@ -1,4 +1,3 @@
-import { answers } from "../answers";
 import { createAnswer } from "../utils/createAnswers";
 
 
@@ -18,7 +17,7 @@ export const CreateWord = (word:string) => {
         const {target} = e;
         if(target) {
           let selectLetter = (target as HTMLInputElement).value;
-          createAnswer(selectLetter, word, answers);
+          createAnswer(selectLetter, word);
         }
       });
       container.append(missingLetter);
@@ -31,6 +30,6 @@ export const CreateWord = (word:string) => {
     }
 
   });
-  createAnswer(" ", word, answers);
+  createAnswer(" ", word);
   return container;
 }

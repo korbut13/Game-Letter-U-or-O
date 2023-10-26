@@ -3,16 +3,18 @@ export const ResultButton = () => {
   resultsButton.innerText = 'Результаты';
   resultsButton.className = 'results-button';
   resultsButton.addEventListener('click', ()=>{
-    const wordsWrapper = document.querySelector('.word-wrapper');
+    const wordsWrapper = document.querySelector('.words-wrapper');
     const resultsWrapper = document.querySelector('.results-wrapper');
     const resultsData = document.querySelector('.results__results-data');
     const checkResults = document.querySelector('.button-check');
     const backButton = document.querySelector('.button-back');
+    const gameResult = document.querySelector('.game-result');
 
     wordsWrapper!.classList.toggle('none');
     resultsWrapper!.classList.toggle('none');
     checkResults!.classList.toggle('none');
     backButton!.classList.remove('none');
+    gameResult?.classList.add('none');
 
     resultsData!.innerHTML = "";
     const results = localStorage.getItem('results');

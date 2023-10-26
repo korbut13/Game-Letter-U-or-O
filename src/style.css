@@ -30,6 +30,10 @@ body{
   justify-content: center;
   gap: 80px;
 }
+.container-content{
+  display: flex;
+  justify-content: center;
+}
 
 .container-letter{
   display: inline;
@@ -191,9 +195,14 @@ body{
   border-right: 1px solid green;
 }
 .container-result > div:last-child{
-  width: calc(100% /2.5);
+  width: calc(100% /2);
   border-right: none;
 }
 .results__wrong-answers{
   color: red;
+  word-wrap: break-word;
+}
+.game-result{
+  color: #ff5500;
+  font-size: 50px;
 }

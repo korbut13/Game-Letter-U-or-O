@@ -1,1 +1,1 @@
-export const answers = {};
+export const answers:{[key:string]:string} = {};
