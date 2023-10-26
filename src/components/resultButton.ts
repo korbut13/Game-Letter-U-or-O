@@ -1,5 +1,3 @@
-import { playersData } from "../playersData";
-
 export const ResultButton = () => {
   const resultsButton = document.createElement('button');
   resultsButton.innerText = 'Результаты';
@@ -9,10 +7,12 @@ export const ResultButton = () => {
     const resultsWrapper = document.querySelector('.results-wrapper');
     const resultsData = document.querySelector('.results__results-data');
     const checkResults = document.querySelector('.button-check');
+    const backButton = document.querySelector('.button-back');
 
     wordsWrapper!.classList.toggle('none');
     resultsWrapper!.classList.toggle('none');
     checkResults!.classList.toggle('none');
+    backButton!.classList.remove('none');
 
     resultsData!.innerHTML = "";
     const results = localStorage.getItem('results');
@@ -32,6 +32,7 @@ export const ResultButton = () => {
         count.innerText = `${sortedResults[i].count}`;
 
         const wrongAnswers = document.createElement('div');
+        wrongAnswers.className = 'results__wrong-answers';
         wrongAnswers.innerText = `${sortedResults[i].wrongAnswers}`;
 
         resultContainer.append(numberGame,count,wrongAnswers);

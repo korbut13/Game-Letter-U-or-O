@@ -18,9 +18,8 @@ export const checkAnswers = () => {
       count++;
     }else{
       const wrongAnswer = document.querySelector(`.${className}`);
-      const prevClassName = wrongAnswer!.classList.value;
-      wrongAnswer!.className = `${prevClassName} wrong-answer`;
-      wrongAnswers.push(answers[key as keyof typeof answers]);
+      wrongAnswer?.classList.add('wrong-answer');
+      wrongAnswers.push(key);
     }
   };
   saveResult(count, wrongAnswers);

@@ -5,8 +5,8 @@ export function saveResult(count:number, wrongAnswers:string[]){
 
   if(resultsDataString){
     const results:GameData[] = JSON.parse(resultsDataString);
-    if(results.length >= 5){
-      const worstResult = results.sort((a,b) => b.count - a.count)[4];
+    if(results.length >= 10){
+      const worstResult = results.sort((a,b) => b.count - a.count)[9];
       if(count > worstResult.count){
         results.pop();
         results.push({count, wrongAnswers});

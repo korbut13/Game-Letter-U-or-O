@@ -1,1 +1,1 @@
-export const words = ['uwaga', 'ulga', 'upomnienie', 'ule', 'upał', 'w domu', 'na strychu']
+export const words = ['uwaga', 'ulga', 'upomnienie', 'ule', 'upał', 'w domu', 'na strychu','ósmy', 'ósemka', 'ów', 'ówdzie', 'ówczesny', 'opiekun', 'rysunek','opiekunka','hamulec','maluję','rysujesz','gotuje','chorują','malujecie','gotujcie','rysuąc','kartkując','polujący','matuchna','tatulo','milutki','koszulka','babunia','malutki','kłębuszek','Anulka','paczuszka','synuś']

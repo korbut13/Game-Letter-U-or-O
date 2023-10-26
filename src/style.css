@@ -12,12 +12,9 @@ body{
   font-family: 'Playpen Sans';
 }
 .container-image{
-  background-image: url('./accets/Прогулка\ 24.10.23-1.jpg');
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-size: 50%;
   width: 100%;
-  height: 90vh;
+  padding: 50px 0px;
+  border-radius: 10px;
 }
 .wrapper{
   width: 70%;
@@ -58,7 +55,8 @@ body{
 
 .button-check,
 .results-button,
-.start-button {
+.start-button,
+.button-back {
   appearance: button;
   background-color: #1899D6;
   border: solid transparent;
@@ -90,7 +88,8 @@ body{
 
 .button-check:after,
 .results-button:after,
-.start-button:after {
+.start-button:after,
+.button-back:after {
   background-clip: padding-box;
   background-color: #1CB0F6;
   border: solid transparent;
@@ -110,26 +109,31 @@ body{
 .results-button:main,
 .results-button:focus,
 .start-button:main,
-.start-button:focus {
+.start-button:focus,
+.button-back:main,
+.button-back:focus {
   user-select: auto;
 }
 
 .button-check:hover:not(:disabled),
 .results-button:hover:not(:disabled),
-.start-button:hover:not(:disabled){
+.start-button:hover:not(:disabled),
+.button-back:hover:not(:disabled){
   filter: brightness(1.1);
   -webkit-filter: brightness(1.1);
 }
 
 .button-check:disabled,
 .results-button:disabled,
-.start-button:disabled {
+.start-button:disabled,
+.button-back:disabled {
   cursor: auto;
 }
 
 .button-check:active,
 .results-button:active,
-.start-button:active {
+.start-button:active,
+.button-back:active {
   border-width: 4px 0 0;
   background: none;
 }
@@ -145,6 +149,12 @@ body{
 .start-button:after {
   background-color: #e9f157;
 }
+.button-back{
+  background-color: #d26c07;
+}
+.button-back:after{
+  background-color: #ff840a;
+}
 .wrong-answer{
   color: red;
 }
@@ -154,7 +164,7 @@ body{
 .results-wrapper{
   width: 70%;
   height: 500px;
-  margin: 0 auto;
+  margin: 20px auto;
   background-color: rgba(248, 248, 56, 0.494);
 }
 .container-result,
@@ -183,4 +193,7 @@ body{
 .container-result > div:last-child{
   width: calc(100% /2.5);
   border-right: none;
+}
+.results__wrong-answers{
+  color: red;
 }
