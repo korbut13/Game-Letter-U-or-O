@@ -1,8 +1,11 @@
 import { answers } from "../answers";
 import { playersData } from "../playersData";
 import { saveResult } from "./saveResult";
+import myAudio from '../accets/winner.mp3';
 
 export const checkAnswers = () => {
+  const sound = new Audio(myAudio);
+  sound.play();
   const gamesAmount:number[] = Array.from(playersData.keys());
   let count = 0;
   const wrongAnswers:string[] = [];
