@@ -7,10 +7,10 @@ import audio3 from '../accets/negative_beeps-6008.mp3';
 
 export function createGameResult(count:number){
   const result:{count:number, img:string, audio:string} = {} as {count:number, img:string, audio:string};
-  if(count === 10){
+  if(count === 28){
     result.img=img1;
     result.audio = audio1;
-  }else if(count <10 && count >4){
+  }else if(count > 10 && count < 28){
     result.img=img2;
     result.audio = audio2;
   }else{

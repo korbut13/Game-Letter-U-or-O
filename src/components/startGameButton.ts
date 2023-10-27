@@ -1,7 +1,7 @@
-import { words } from "../words";
 import { CreateWord } from "./word";
 import startSound from '../accets/gameStart.mp3';
 import { clearAnswers } from "../utils/clearAnswers";
+import { getWords } from "../utils/getWords";
 
 export const StartGameButton = () => {
   const startButton = document.createElement('button');
@@ -16,7 +16,7 @@ export const StartGameButton = () => {
     wordsWrapper!.innerHTML = "";
 
     clearAnswers();
-    const selectedWords = (words.sort(() => Math.random() - 0.5)).slice(0,10);
+    const selectedWords = getWords();
     selectedWords.forEach(el => {
       wordsWrapper!.append(CreateWord(el));
     })

@@ -4,7 +4,6 @@ import { answers } from "../answers";
 
 export const checkAnswers = () => {
   let count = 0;
-  console.log(count, 555, "Hello", Object.keys(answers).length)
 
   const wrongAnswers:string[] = [];
 
@@ -20,7 +19,7 @@ export const checkAnswers = () => {
       wrongAnswers.push(key);
     }
   };
-  console.log(count, 666, "Hello", 666,Object.keys(answers).length);
+
   const result = createGameResult(count);
 
   const gameResult = document.querySelector('.game-result');
