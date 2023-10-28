@@ -16,6 +16,6 @@ export const WordsWrapper = () => {
 
   gameResult.append(countResult, imgResult);
 
-  content.append(wordsWrapper,gameResult)
+  content.append(gameResult, wordsWrapper)
   return content;
 }

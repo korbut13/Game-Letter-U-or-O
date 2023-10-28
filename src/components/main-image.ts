@@ -11,6 +11,7 @@ export const MainImage = () => {
   const imgContainer = document.createElement('div');
   imgContainer.className = 'container-image';
   const img = document.createElement('img');
+  img.className = 'main-image';
   img.src = images[randomNumber];
   imgContainer.append(img)
   return imgContainer;
